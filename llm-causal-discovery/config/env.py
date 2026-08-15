@@ -1,0 +1,22 @@
+import os
+from dotenv import load_dotenv
+
+os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
+
+load_dotenv()
+
+QDRANT_API_KEY = os.getenv("QDRANT_KEY")
+QDRANT_CLUSTER_URL = os.getenv("QDRANT_URL")
+COLLECTION_NAME = os.getenv("COLLECTION_NAME")
+VECTOR_DIMENSION = os.getenv("VECTOR_DIMENSION")
+HUGGINGFACE_TOKEN = os.getenv("HUGGINGFACE_TOKEN_ANNE")
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL")
+EMBEDDING_MODEL_MED = os.getenv("EMBEDDING_MODEL_GEMMA")
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", None)
+MISTRAL_API_KEY = os.getenv("MISTRAL_API_KEY", None)
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", None)
+
+CASE_REPORTS_DIR = os.getenv("CASE_REPORTS_DIR")
+OUTPUT_FILE_DIR = os.getenv("OUTPUT_FILE")
+
